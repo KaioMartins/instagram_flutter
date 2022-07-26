@@ -72,4 +72,35 @@ class AuthMethods {
     }
     return res;
   }
+
+  //logging in user
+  Future<String> loginUser({
+    required String email,
+    required String password,
+  }) async {
+    String res = "Some error ocurred";
+
+    try {
+      if (email.isNotEmpty || password.isNotEmpty) {
+        await _auth.signInWithEmailAndPassword(
+          email: email,
+          password: password,
+        );
+        res = "success";
+      } else {
+        res = "Please enter all the fields";
+      }
+    }
+    // Tratando erros direito do firebase
+    // on FirebaseAuthException catch(e){
+    //   if(e.code == 'user-not--found'){
+
+    //   }
+    // }
+
+    catch (err) {
+      res = err.toString();
+    }
+    return res;
+  }
 }

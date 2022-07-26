@@ -71,7 +71,7 @@ class _SignupScreenState extends State<SignupScreen> {
             width: double.infinity,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
+              children: <Widget>[
                 Flexible(
                   child: Container(),
                   flex: 2,
