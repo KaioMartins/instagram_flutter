@@ -5,7 +5,7 @@ import 'package:image_picker/image_picker.dart';
 import 'package:instagram_flutter/resources/auth_methods.dart';
 import 'package:instagram_flutter/screens/login_screen.dart';
 import 'package:instagram_flutter/utils/utils.dart';
-
+import 'dart:typed_data';
 import '../responsive/mobile_screen_layout.dart';
 import '../responsive/responsive_layout_screen.dart';
 import '../responsive/web_screen_layout.dart';
